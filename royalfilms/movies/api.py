@@ -8,10 +8,10 @@ from rest_framework import status
 from rest_framework import permissions
 
 
-class MovieList(generics.ListCreateAPIView):
+class MovieList(generics.ListAPIView):
     """
     API class for list all Movies from a thread, or create a new Movie.
     """
-    permission_classes = (permissions.IsAdminUser,)
+    # permission_classes = (permissions.IsAdminUser,)
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
