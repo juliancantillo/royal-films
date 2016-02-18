@@ -13,7 +13,7 @@ from __future__ import absolute_import, unicode_literals
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # (/a/b/myfile.py - 3 = /)
-APPS_DIR = ROOT_DIR.path('royal-films')
+APPS_DIR = ROOT_DIR.path('royalfilms')
 
 env = environ.Env()
 
@@ -39,12 +39,13 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+    'rest_framework',
 )
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    'royal-films.users',  # custom users app
-    'royal-films.movies',
+    'royalfilms.users',  # custom users app
+    'royalfilms.movies',
     # Your stuff: custom apps go here
 )
 
@@ -66,7 +67,7 @@ MIDDLEWARE_CLASSES = (
 # MIGRATIONS CONFIGURATION
 # ------------------------------------------------------------------------------
 MIGRATION_MODULES = {
-    'sites': 'royal-films.contrib.sites.migrations'
+    'sites': 'royalfilms.contrib.sites.migrations'
 }
 
 # DEBUG
@@ -212,8 +213,8 @@ AUTHENTICATION_BACKENDS = (
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-ACCOUNT_ADAPTER = 'royal-films.users.adapter.AccountAdapter'
-SOCIALACCOUNT_ADAPTER = 'royal-films.users.adapter.SocialAccountAdapter'
+ACCOUNT_ADAPTER = 'royalfilms.users.adapter.AccountAdapter'
+SOCIALACCOUNT_ADAPTER = 'royalfilms.users.adapter.SocialAccountAdapter'
 ACCOUNT_ALLOW_REGISTRATION = True
 
 # Custom user app defaults
@@ -230,3 +231,10 @@ AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'
 ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
