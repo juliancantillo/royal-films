@@ -8,8 +8,10 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
+from royalfilms.core.views import HomeView
+
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
+    url(r'^$', HomeView.as_view(), name="home"),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name="about"),
     url(r'^movies/', include("royalfilms.movies.urls", namespace="movies")),
 

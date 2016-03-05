@@ -46,6 +46,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'royalfilms.users',  # custom users app
     'royalfilms.movies',
+    'royalfilms.cinemas',
     # Your stuff: custom apps go here
 )
 

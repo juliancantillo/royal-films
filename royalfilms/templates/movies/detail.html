@@ -1,1 +1,17 @@
 {% extends "base.html" %}
+
+
+{% block content %}
+  
+  <div class="container">
+    <div class="col-md-3">
+        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{movie.poster}}" alt="Card image cap">
+    </div>
+    <div class="col-md-9">
+      <h2>{{movie.title}}</h2>
+      <p>{{movie.plot}}</p>
+    </div>
+  </div>
+
+
+{% endblock content %}
