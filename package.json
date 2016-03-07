@@ -13,7 +13,7 @@
   "repository": "https://github.com/juliancantillo/royal-films.git",
   "scripts": {
     "start": "webpack --progress --colors --watch",
-    "build": "webpack -p webpack.config.production.babel.js"
+    "build": "NODE_ENV=production webpack -p --config webpack.config.production.babel.js"
   },
   "devDependencies": {
     "babel-core": "^6.6.5",
