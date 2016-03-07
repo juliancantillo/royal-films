@@ -8,6 +8,14 @@ class MovieSerializer(serializers.ModelSerializer):
     """
     url = serializers.URLField(source='get_absolute_url', read_only=True)
     uuid = serializers.UUIDField(format='hex')
-    
+
     class Meta:
         model = Movie
+
+class ShowtimeMovieSerializer(serializers.ModelSerializer):
+
+    uuid = serializers.UUIDField(format='hex')
+
+    class Meta:
+        model = Movie
+        fields = ('uuid','title','runtime')

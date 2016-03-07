@@ -40,7 +40,7 @@ class Cinema(BaseModelMixin):
 
 
 
-class Function(models.Model):
+class Function(BaseModelMixin):
     """
     Description: Movies functions in a Cinema
     """
@@ -56,12 +56,11 @@ class Function(models.Model):
         blank=False,
         verbose_name=_('Published until'))
 
-    created_at = models.DateTimeField(
-        auto_now_add=True, 
-        verbose_name=_('Created at'))
-
     def __str__(self):
-        return '{1} in {0}'.format(self.cinema.name, self.movie.title)
+        return _('{1} in {0}').format(self.cinema.name, self.movie.title)
+
+    def __unicode__(self):
+        return _('{1} in {0}').format(self.cinema.name, self.movie.title)
 
 
 class Show(BaseModelMixin):
@@ -73,11 +72,19 @@ class Show(BaseModelMixin):
     #sell_until, show_date, is_available_for_sale, is_sold_out, prices
 
     function = models.ForeignKey(Function)
-    
+
     def __str__(self):
         return _('{0} in {1} at {2}').format(
             self.function.movie.title,
             self.function.cinema.name,
             self.time)
 
-    
+    def __unicode__(self):
+        return _('{0} in {1} at {2}').format(
+            self.function.movie.title,
+            self.function.cinema.name,
+            self.time)
+
+
+
+

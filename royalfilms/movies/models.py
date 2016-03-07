@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+import datetime
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -26,10 +27,6 @@ class Movie(BaseModelMixin):
         max_length=1000, blank=False,null=True,
         verbose_name=_('Synopsis'))
 
-    plot = models.TextField(
-        max_length=1000, blank=False,
-        verbose_name=_('Plot'))
-
     # Movie poster for theaters
     poster = models.ImageField(upload_to='movies/covers/')
 
@@ -52,4 +49,9 @@ class Movie(BaseModelMixin):
 
     def get_absolute_url(self):
         return reverse('movies:detail', args=[str(self.slug)])
+
+    def _get_runtime(self):
+        return str(datetime.timedelta(minutes=self.runtime))
+
+    display_runtime = property(_get_runtime)
         
