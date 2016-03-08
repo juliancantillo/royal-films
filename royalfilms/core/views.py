@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 
+from geoip2.errors from AddressNotFoundError
 from django.contrib.gis.geoip2 import GeoIP2
 
 from royalfilms.movies.models import Movie
@@ -22,8 +23,8 @@ class HomeView(ListView):
 
             context['city'] = g.city(ip)['city']
 
-        except Exception as e:
-            pass
+        except AddressNotFoundError as e:
+            context['city'] = _('Unknown')
 
         context['cinemas'] = Cinema.objects.all()
 
