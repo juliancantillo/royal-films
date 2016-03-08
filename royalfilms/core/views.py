@@ -22,7 +22,7 @@ class HomeView(ListView):
 
             context['city'] = g.city(ip)['city']
 
-        except Exception, e:
+        except Exception as e:
             pass
 
         context['cinemas'] = Cinema.objects.all()
