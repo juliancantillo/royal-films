@@ -10,7 +10,10 @@ class CinemaAdmin(admin.ModelAdmin):
 
 @admin.register(Function)
 class FunctionAdmin(admin.ModelAdmin):
-    pass
+    list_filter = ('cinema__name','published_until',)
+
+    def get_queryset(self,request):
+        return self.model.objects.all()
 
 @admin.register(Show)
 class ShowAdmin(admin.ModelAdmin):

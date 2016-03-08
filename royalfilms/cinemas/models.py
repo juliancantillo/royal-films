@@ -4,6 +4,8 @@ from django.db import models
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 
+from .managers import FunctionsManager
+
 from royalfilms.core.mixins import BaseModelMixin
 from royalfilms.movies.models import Movie
 
@@ -56,6 +58,9 @@ class Function(BaseModelMixin):
         blank=False,
         verbose_name=_('Published until'))
 
+    now_playing = FunctionsManager()
+    objects = models.Manager()
+
     def __str__(self):
         return _('{1} in {0}').format(self.cinema.name, self.movie.title)
 
@@ -69,6 +74,7 @@ class Show(BaseModelMixin):
     """
     time = models.TimeField(auto_now=False, blank=False)
 
+    #TODO
     #sell_until, show_date, is_available_for_sale, is_sold_out, prices
 
     function = models.ForeignKey(Function)
