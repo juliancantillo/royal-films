@@ -241,3 +241,5 @@ REST_FRAMEWORK = {
     ],
     'PAGE_SIZE': 10
 }
+
+GEOIP_PATH = str(ROOT_DIR.path('config/geoip'))
