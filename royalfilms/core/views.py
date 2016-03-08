@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 
-from geoip2.errors from AddressNotFoundError
+from geoip2.errors import AddressNotFoundError
 from django.contrib.gis.geoip2 import GeoIP2
+from django.utils.translation import ugettext_lazy as _
 
 from royalfilms.movies.models import Movie
 from royalfilms.cinemas.models import Function, Cinema
+
 
 class HomeView(ListView):
     model = Function
