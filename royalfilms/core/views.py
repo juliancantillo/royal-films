@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 
+from ipware.ip import get_real_ip
 from geoip2.errors import AddressNotFoundError
 from django.contrib.gis.geoip2 import GeoIP2
 from django.utils.translation import ugettext_lazy as _
@@ -21,7 +22,7 @@ class HomeView(ListView):
 
         try:
             g = GeoIP2()
-            ip = self.request.META.get('REMOTE_ADDR', None)
+            ip = get_real_ip(self.request)
 
             context['city'] = g.city(ip)['city']
 
