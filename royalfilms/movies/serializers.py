@@ -15,7 +15,9 @@ class MovieSerializer(serializers.ModelSerializer):
 class ShowtimeMovieSerializer(serializers.ModelSerializer):
 
     uuid = serializers.UUIDField(format='hex')
+    url = serializers.URLField(source='get_absolute_url', read_only=True)
+    runtime = serializers.CharField(source='display_runtime', read_only=True)
 
     class Meta:
         model = Movie
-        fields = ('uuid','title','runtime')
+        fields = ('uuid','title','url','runtime')

@@ -3,7 +3,7 @@ import React from 'react';
 export default class Movie extends React.Component {
   static propTypes = {
     name: React.PropTypes.string,
-    showtimes: React.PropTypes.array,
+    groups: React.PropTypes.array,
   };
 
   constructor(props) {
@@ -12,11 +12,20 @@ export default class Movie extends React.Component {
 
   render() {
 
-  	let showtimesList = this.props.showtimes.map((showtime, idx) => {
-  		return (
-  			<a className="btn btn-sm btn-link" key={idx}>{showtime.time}</a>
-			);
-  	});
+  	let showtimesList = this.props.groups.map((group, index) => {
+
+      let showtimes = group.showtimes.map(function(elem, idx) {
+        return(
+          <a className="btn btn-sm btn-link" key={idx}>{elem.time}</a>
+          );
+      })
+
+      return (
+        <div className="list-group-item-text" key={index}>
+          {showtimes}
+        </div>
+      );
+    });
 
 		return (
 			<li className="list-group-item">

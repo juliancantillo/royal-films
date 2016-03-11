@@ -17,7 +17,7 @@ export default class CinemasList extends React.Component {
   render() {
 
   	let cinemaList = this.props.cinemas.map((showtimes) => {
-			return (<Cinema key={showtimes.cinema.uuid} name={showtimes.cinema.name} showtimes={showtimes.showtimes}/>);
+			return (<Cinema key={showtimes.cinema.uuid} name={showtimes.cinema.name} groups={showtimes.group}/>);
 		});
 
     return (

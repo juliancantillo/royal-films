@@ -24,7 +24,11 @@ class HomeView(ListView):
             g = GeoIP2()
             ip = get_real_ip(self.request)
 
-            context['city'] = g.city(ip)['city']
+            if ip is not None:
+                context['city'] = g.city(ip)['city']
+            else:
+                context['city'] = _('Unknown')
+
 
         except AddressNotFoundError as e:
             context['city'] = _('Unknown')

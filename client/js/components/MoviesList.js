@@ -17,7 +17,7 @@ export default class MoviesList extends React.Component {
   render() {
 
   	let movieList = this.props.movies.map((movie) => {
-			return (<Movie key={movie.uuid} name={movie.title} showtimes={movie.showtimes}/>);
+			return (<Movie key={movie.uuid} movie={movie.movie} groups={movie.group}/>);
 		});
 
     return (

@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404
 
-from .serializers import CinemaSerializer,\
-        FunctionSerializer, ShowtimesSerializer, CinemaFunctionsSerializer
+from .serializers import CinemaSerializer, ShowtimesSerializer,\
+        FunctionSerializer, ShowSerializer, CinemaFunctionsSerializer
 from .models import Cinema, Function
 
 from rest_framework import generics
@@ -34,13 +34,6 @@ class ShowtimesView(generics.ListAPIView):
     lookup_url_kwarg = 'uuid'
     serializer_class = ShowtimesSerializer
 
-    # @list_route(methods=['get'])
-    # def movies(self, request, uuid=None):
-    #     queryset = Function.objects.all()
-    #     functions = get_object_or_404(queryset, cinema__uuid=uuid)
-    #     serializer = ShowtimesSerializer(functions)
-    #     return Response(serializer.data)
-
     def get_queryset(self):
         if 'uuid' in self.kwargs:
             return Function.objects.filter(
@@ -48,18 +41,3 @@ class ShowtimesView(generics.ListAPIView):
                 )
 
         return Function.objects.all()
-
-    # def get_object(self):
-    #     try:
-    #         return Function.objects.get(cinema__uuid=uudi)
-    #     except Cinema.DoesNotExist:
-    #         raise Http404
-# class CinemaDetail(APIView):
-#     """
-#     Retrieve, update or delete a Cinema instance.
-#     """
-
-#     def get(self, request, uuid, format=None):
-#         cinema = self.get_object(uuid)
-#         serializer = CinemaSerializer(cinema)
-#         return Response(serializer.data)
