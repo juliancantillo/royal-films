@@ -1,0 +1,419 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-12 15:12-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: royalfilms/cinemas/models.py:20 royalfilms/cinemas/models.py:111
+msgid "Name"
+msgstr "Nombre"
+
+#: royalfilms/cinemas/models.py:23
+msgid "Address"
+msgstr "Dirección"
+
+#: royalfilms/cinemas/models.py:26
+msgid "Phone"
+msgstr "Teléfono"
+
+#: royalfilms/cinemas/models.py:29
+msgid "City"
+msgstr "Ciudad"
+
+#: royalfilms/cinemas/models.py:40
+msgid "Latitude"
+msgstr "Latitud"
+
+#: royalfilms/cinemas/models.py:43
+msgid "Longitude"
+msgstr "Longitud"
+
+#: royalfilms/cinemas/models.py:63
+msgid "Published at"
+msgstr "Publicado el"
+
+#: royalfilms/cinemas/models.py:67
+msgid "Published until"
+msgstr "Publicado hasta"
+
+#: royalfilms/cinemas/models.py:80 royalfilms/cinemas/models.py:83
+#, python-brace-format
+msgid "{1} in {0}"
+msgstr "{1} en {0}"
+
+#: royalfilms/cinemas/models.py:94
+msgid "Is 3D"
+msgstr "Es 3D"
+
+#: royalfilms/cinemas/models.py:97 royalfilms/cinemas/models.py:100
+#, python-brace-format
+msgid "{0} in Auditorium {1}"
+msgstr "{0} en la Sala {1}"
+
+#: royalfilms/cinemas/models.py:117 royalfilms/cinemas/models.py:120
+#, python-brace-format
+msgid "Auditorium {1} in {0}"
+msgstr "Sala {1} en {0}"
+
+#: royalfilms/cinemas/models.py:130
+msgid "Booking URL"
+msgstr "URL de Reserva"
+
+#: royalfilms/cinemas/models.py:136 royalfilms/cinemas/models.py:139
+#, python-brace-format
+msgid "{0} at {1}"
+msgstr "{0} a las {1}"
+
+#: royalfilms/core/constants.py:6
+msgid "Santiago de Cali"
+msgstr "Santiago de Cali"
+
+#: royalfilms/core/constants.py:7
+msgid "Medellín"
+msgstr "Medellin"
+
+#: royalfilms/core/mixins.py:20
+msgid "Created at"
+msgstr "Creado el"
+
+#: royalfilms/core/mixins.py:23
+msgid "Updated at"
+msgstr "Actualizado el"
+
+#: royalfilms/core/views.py:30 royalfilms/core/views.py:34
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: royalfilms/movies/models.py:19
+msgid "Title"
+msgstr "Título"
+
+#: royalfilms/movies/models.py:22
+msgid "Original Title"
+msgstr "Título Original"
+
+#: royalfilms/movies/models.py:28 royalfilms/templates/movies/detail.html.py:13
+msgid "Synopsis"
+msgstr "Sinopsis"
+
+#: royalfilms/movies/models.py:36
+msgid "Trailer"
+msgstr "Avance de la película"
+
+#: royalfilms/movies/models.py:39
+msgid "Runtime"
+msgstr "Duración"
+
+#: royalfilms/movies/models.py:42
+msgid "Imdb"
+msgstr "Imdb"
+
+#: royalfilms/movies/models.py:45
+msgid "Imdb Rating"
+msgstr "Calificación en Imdb"
+
+#: royalfilms/templates/account/email.html:6
+msgid "Account"
+msgstr "Cuenta"
+
+#: royalfilms/templates/account/email.html:12
+msgid "E-mail Addresses"
+msgstr "Dirección de Correo"
+
+#: royalfilms/templates/account/email.html:14
+msgid "The following e-mail addresses are associated with your account:"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:28
+msgid "Verified"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:30
+msgid "Unverified"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:32
+msgid "Primary"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:38
+msgid "Make Primary"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:39
+msgid "Re-send Verification"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:40
+msgid "Remove"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:47
+msgid "Warning:"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:47
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: royalfilms/templates/account/email.html:52
+msgid "Add E-mail Address"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:57
+msgid "Add E-mail"
+msgstr ""
+
+#: royalfilms/templates/account/email.html:68
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr ""
+
+#: royalfilms/templates/account/email_confirm.html:6
+#: royalfilms/templates/account/email_confirm.html:13
+#: royalfilms/templates/account/email_confirmed.html:6
+#: royalfilms/templates/account/email_confirmed.html:13
+msgid "Confirm E-mail Address"
+msgstr ""
+
+#: royalfilms/templates/account/email_confirm.html:19
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+
+#: royalfilms/templates/account/email_confirm.html:23
+msgid "Confirm"
+msgstr ""
+
+#: royalfilms/templates/account/email_confirm.html:30
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+
+#: royalfilms/templates/account/email_confirmed.html:17
+#, python-format
+msgid ""
+"You have confirmed that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-"
+"mail address for user %(user_display)s."
+msgstr ""
+
+#: royalfilms/templates/account/login.html:8
+#: royalfilms/templates/account/login.html:14
+#: royalfilms/templates/account/login.html:41
+msgid "Sign In"
+msgstr ""
+
+#: royalfilms/templates/account/login.html:17
+#, python-format
+msgid ""
+"Please sign in with one\n"
+"      of your existing third party accounts. Or, <a href=\"%(signup_url)s"
+"\">sign up</a>\n"
+"      for a %(site_name)s account and sign in below:"
+msgstr ""
+
+#: royalfilms/templates/account/login.html:27
+msgid "or"
+msgstr ""
+
+#: royalfilms/templates/account/login.html:42
+msgid "Forgot Password?"
+msgstr ""
+
+#: royalfilms/templates/account/logout.html:5
+#: royalfilms/templates/account/logout.html:12
+#: royalfilms/templates/account/logout.html:21
+msgid "Sign Out"
+msgstr ""
+
+#: royalfilms/templates/account/logout.html:14
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: royalfilms/templates/account/password_change.html:5
+#: royalfilms/templates/account/password_change.html:11
+#: royalfilms/templates/account/password_change.html:16
+#: royalfilms/templates/account/password_reset_from_key.html:6
+#: royalfilms/templates/account/password_reset_from_key.html:12
+#: royalfilms/templates/account/password_reset_from_key_done.html:4
+#: royalfilms/templates/account/password_reset_from_key_done.html:10
+msgid "Change Password"
+msgstr ""
+
+#: royalfilms/templates/account/password_reset.html:7
+#: royalfilms/templates/account/password_reset.html:14
+#: royalfilms/templates/account/password_reset_done.html:6
+#: royalfilms/templates/account/password_reset_done.html:12
+msgid "Password Reset"
+msgstr ""
+
+#: royalfilms/templates/account/password_reset.html:19
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+
+#: royalfilms/templates/account/password_reset.html:24
+msgid "Reset My Password"
+msgstr ""
+
+#: royalfilms/templates/account/password_reset.html:27
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr ""
+
+#: royalfilms/templates/account/password_reset_done.html:18
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: royalfilms/templates/account/password_reset_from_key.html:12
+msgid "Bad Token"
+msgstr ""
+
+#: royalfilms/templates/account/password_reset_from_key.html:16
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+
+#: royalfilms/templates/account/password_reset_from_key.html:22
+msgid "change password"
+msgstr ""
+
+#: royalfilms/templates/account/password_reset_from_key.html:25
+#: royalfilms/templates/account/password_reset_from_key_done.html:11
+msgid "Your password is now changed."
+msgstr ""
+
+#: royalfilms/templates/account/password_set.html:6
+#: royalfilms/templates/account/password_set.html:12
+#: royalfilms/templates/account/password_set.html:17
+msgid "Set Password"
+msgstr ""
+
+#: royalfilms/templates/account/signup.html:6
+msgid "Signup"
+msgstr ""
+
+#: royalfilms/templates/account/signup.html:13
+#: royalfilms/templates/account/signup.html:23
+#: royalfilms/templates/base.html:63
+msgid "Sign Up"
+msgstr ""
+
+#: royalfilms/templates/account/signup.html:15
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+
+#: royalfilms/templates/account/signup_closed.html:5
+#: royalfilms/templates/account/signup_closed.html:11
+msgid "Sign Up Closed"
+msgstr ""
+
+#: royalfilms/templates/account/signup_closed.html:13
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: royalfilms/templates/account/verification_sent.html:5
+#: royalfilms/templates/account/verification_sent.html:11
+#: royalfilms/templates/account/verified_email_required.html:5
+#: royalfilms/templates/account/verified_email_required.html:11
+msgid "Verify Your E-mail Address"
+msgstr ""
+
+#: royalfilms/templates/account/verification_sent.html:13
+#, python-format
+msgid ""
+"We have sent an e-mail to <a href=\"mailto:%(email)s\">%(email)s</a> for "
+"verification. Follow the link provided to finalize the signup process. "
+"Please contact us if you do not receive it within a few minutes."
+msgstr ""
+
+#: royalfilms/templates/account/verified_email_required.html:15
+msgid ""
+"This part of the site requires us to verify that\n"
+"        you are who you claim to be. For this purpose, we require that you\n"
+"        verify ownership of your e-mail address. "
+msgstr ""
+
+#: royalfilms/templates/account/verified_email_required.html:19
+msgid ""
+"We have sent an e-mail to you for\n"
+"        verification. Please click on the link inside this e-mail. Please\n"
+"        contact us if you do not receive it within a few minutes."
+msgstr ""
+
+#: royalfilms/templates/account/verified_email_required.html:23
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+
+#: royalfilms/templates/base.html:46
+msgid "Home"
+msgstr "Inicio"
+
+#: royalfilms/templates/base.html:49
+msgid "About"
+msgstr "Acerca de"
+
+#: royalfilms/templates/base.html:56
+msgid "My Profile"
+msgstr "Mi Perfil"
+
+#: royalfilms/templates/base.html:59
+msgid "Logout"
+msgstr "Salir"
+
+#: royalfilms/templates/base.html:66
+msgid "Log In"
+msgstr "Ingresar"
+
+#: royalfilms/templates/movies/detail.html:17
+msgid "Running Time"
+msgstr "Duración de la película"
+
+#: royalfilms/templates/pages/home.html:9
+msgid "In theatres now"
+msgstr "Cartelera"
+
+#: royalfilms/templates/pages/home.html:22
+msgid "Theatres"
+msgstr "Teatros"
+
+#: royalfilms/templates/users/user_detail.html:24
+msgid "Personal information"
+msgstr "Información personal"
+
+#: royalfilms/templates/users/user_detail.html:25
+msgid "E-mail Settings"
+msgstr "Configuración de correo"
+
+#: royalfilms/users/models.py:17
+msgid "Full name"
+msgstr "Nombre completo"
